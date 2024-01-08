@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #2f3542;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container{
+            font-size: 34px;
+            font-weight: 600;
+            min-width: 280px;
+        }
+
+        .container span{
+            position: relative;
+        }
+
+        .container span::before{
+            content: "Coding";
+            color: #ff7f50;
+            animation: words 20s infinite;
+        }
+
+        .container span::after{
+            content: "";
+            position: absolute;
+            width: calc(100% + 8px);/* calc 100% gets width of the parent container and adds 8px */
+            height: 100%;
+            background-color: #2f3542;
+            border-left: 2px solid #ff7f50;
+            right: -8px;
+            animation: cursor .8s infinite, typing 20s steps(14) infinite;
+        }
+
+        @keyframes cursor{
+            to{border-left: 2px solid #ff7f5000;}
+        }
+
+        @keyframes words{
+            0%, 20%{
+                content: "Coding";
+            }
+            21%, 40%{
+                content: "a Blogger with no content";
+            }
+            41%, 60%{
+                content: "a Developer";
+            }
+            61%, 80%{
+                content: "a Designer";
+            }
+            81%, 100%{
+                content: "a Gamer";
+            }
+        }
+
+        @keyframes typing{
+            10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+                width: 0;
+            }
+            5%,20%,25%,40%,45%,60%,65%,80%,85%{
+                width: calc(100% + 8px);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            Hi, Iam <span class="auto"></span>
+        </div>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
+
+    <script>
+
+
+        // var typed = new Typed(".auto", {
+        //     strings: ["coding", "sleeping", "eating"],
+        //     typespeed: 150,
+        //     backspeed: 150,
+        //     loop: true
+        // })
+    </script>
+</body>
+</html>
