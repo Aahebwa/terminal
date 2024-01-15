@@ -8,7 +8,7 @@
     </head>
     <body>
         
-        <form action="">
+        <form action="form.php" method="post">
             <label for="">Title:</label>
             <input type="text" name="title">
 
